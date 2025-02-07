@@ -4,8 +4,8 @@
  * @version 1.0
  */
 public class Personaje {
-    String nombre;
-    int vida;
+    String nombre; // Nombre del personaje
+    int vida; // La vida del personaje
 
     /**
      * Constructor de los personajes que permite definir el nombre y la vida por defecto
