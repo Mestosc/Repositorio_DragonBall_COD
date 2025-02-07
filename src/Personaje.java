@@ -13,8 +13,16 @@ public class Personaje {
      * @param vida la vida del personaje
      */
     public Personaje(String nombre, int vida) {
-        this.nombre = nombre;
-        this.vida = vida;
+        this.nombre = nombre; // Igualamos nombre a this.nombre que es el nombre definido en la clase
+        this.vida = vida; // Hacemos lo mismo con vida
+    }
+
+    /**
+     * Constructor que solo define el nombre y tiene la vida predefinida
+     * @param nombre el nombre que quieres darle al personaje
+     */
+    public Personaje(String nombre) {
+       this(nombre,100);
     }
 
     /**
