@@ -16,4 +16,12 @@ public class Personaje {
         this.nombre = nombre;
         this.vida = vida;
     }
+
+    /**
+     * Construccion de personaje por defecto
+     */
+    public Personaje() {
+        this.nombre = "Mutenroy";
+        this.vida = 1000;
+    }
 }
