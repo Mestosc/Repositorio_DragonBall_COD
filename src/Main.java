@@ -3,6 +3,6 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Hello Dragon Ball!");
-        Personaje personaje = new Personaje("aklfj",10);
+        Personaje personaje1 = new Personaje();
     }
 }
