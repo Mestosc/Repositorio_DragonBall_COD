@@ -49,13 +49,18 @@ public class Personaje {
         this.vida = vida;
     }
     public int perderVida(int dano) {
-        if (dano<0) {
-            this.vida += dano;
-        } else if (dano>vida) {
+        if (vida>0) {
+            if (dano<0) {
+                this.vida += dano;
+         } else if (dano>vida) {
             this.vida = 0;
         }
-        else {
+        else if (dano<this.vida) {
             this.vida -= dano;
+        }
+        }
+        else {
+            this.vida = 0;
         }
         return vida;
     }
