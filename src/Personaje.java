@@ -4,8 +4,8 @@
  * @version 1.0
  */
 public class Personaje {
-    String nombre; // Nombre del personaje
-    int vida; // La vida del personaje
+    private String nombre; // Nombre del personaje
+    private int vida; // La vida del personaje
 
     /**
      * Constructor de los personajes que permite definir el nombre y la vida por defecto
@@ -31,5 +31,21 @@ public class Personaje {
     public Personaje() {
         this.nombre = "Mutenroy";
         this.vida = 1000;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getVida() {
+        return vida;
+    }
+
+    public void setVida(int vida) {
+        this.vida = vida;
     }
 }
