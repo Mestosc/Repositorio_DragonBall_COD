@@ -52,12 +52,12 @@ public class Personaje {
         if (vida>0) {
             if (dano<0) {
                 this.vida += dano;
-         } else if (dano>vida) {
-            this.vida = 0;
-        }
-        else if (dano<this.vida) {
-            this.vida -= dano;
-        }
+            } else if (dano>vida) {
+                this.vida = 0;
+            }
+            else {
+                this.vida -= dano;
+            }
         }
         else {
             this.vida = 0;
