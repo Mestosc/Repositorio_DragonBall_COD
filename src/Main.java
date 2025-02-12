@@ -1,6 +1,9 @@
 
 public class Main {
     public static void main(String[] args) {
+        /*
+        Prueba para practicar el concepto de tests unitarios
+         */
         Personaje personaje1 = new Personaje("Goku",100);
         Personaje personaje2 = new Personaje("Gokud",1000);
         Personaje personaje3 = new Personaje("Goku",4000);
