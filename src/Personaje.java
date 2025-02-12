@@ -48,4 +48,8 @@ public class Personaje {
     public void setVida(int vida) {
         this.vida = vida;
     }
+    public int perderVida(int dano) {
+        this.vida -= dano;
+        return vida;
+    }
 }
