@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 class PersonajeTest {
     @ParameterizedTest(name = "Con vida inicial {0} y daño {1}, se espera que la vida sea {2}")
     @CsvSource({
-            // Caso: daño negativo (independientemente de la vida > 0, se setea a 0)
+            // Caso: daño negativo (se setea la vida al valor de restarle al valor positivo ya que no tiene sentido restarle un valor negativo a la vida)
             "10, -5, 5",
             // Caso: daño mayor que la vida
             "10, 15, 0",
