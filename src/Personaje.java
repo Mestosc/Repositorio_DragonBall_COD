@@ -51,7 +51,7 @@ public class Personaje {
     public int perderVida(int dano) {
         if (vida>0) {
             if (dano<0) {
-                this.vida = 0;
+                this.vida -= Math.abs(dano);
             } else if (dano>vida) {
                 this.vida = 0;
             }

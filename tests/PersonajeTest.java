@@ -4,16 +4,26 @@ import org.junit.jupiter.params.provider.CsvSource;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PersonajeTest {
-    @ParameterizedTest(name = "Pierde {0} puntos de vida, se espera que queden {1}")
+    @ParameterizedTest(name = "Con vida inicial {0} y daño {1}, se espera que la vida sea {2}")
     @CsvSource({
-            "999,1",
-            "1000,0",
-            "2000,0",
-            "-10000,0"
+            // Caso: daño negativo (independientemente de la vida > 0, se setea a 0)
+            "10, -5, 5",
+            // Caso: daño mayor que la vida
+            "10, 15, 0",
+            // Caso: daño menor que la vida
+            "10, 5, 5",
+            // Caso: daño igual a la vida (se resta y queda 0)
+            "10, 10, 0",
+            // Caso: daño 0, la vida permanece igual
+            "10, 0, 10",
+            // Caso: vida menor o igual a 0 (sin importar el daño, la vida es 0)
+            "0, 5, 0",
+            "-1, 3, 0"
     })
-     void perderVida(int dano, int queda) {
-        Personaje personaje1 = new Personaje("Hola",1000);
-        assertEquals(queda,personaje1.perderVida(dano));
+    void testPerderVida(int vidaInicial, int dano, int vidaEsperada) {
+        Personaje objeto = new Personaje("Mutenroy",vidaInicial);
+        int resultado = objeto.perderVida(dano);
+        assertEquals(vidaEsperada, resultado, "Falló para vidaInicial: " + vidaInicial + " y daño: " + dano);
     }
 
 }
