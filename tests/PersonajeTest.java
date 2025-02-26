@@ -18,7 +18,8 @@ class PersonajeTest {
             "10, 0, 10",
             // Caso: vida menor o igual a 0 (sin importar el daño, la vida es 0)
             "0, 5, 0",
-            "-1, 3, 0"
+            "-1, 3, 0",
+            "908,10,898"
     })
     void testPerderVida(int vidaInicial, int dano, int vidaEsperada) {
         Personaje objeto = new Personaje("Mutenroy",vidaInicial);
