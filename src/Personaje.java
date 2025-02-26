@@ -51,7 +51,7 @@ public class Personaje {
     public int perderVida(int dano) {
         if (vida>0) {
             if (dano<0) {
-                this.vida += dano;
+                this.vida = 0;
             } else if (dano>vida) {
                 this.vida = 0;
             }
